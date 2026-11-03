@@ -31,6 +31,11 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   res.status(500).json({ message: 'Serverda ichki xatolik yuz berdi.', error: err.message });
 });
 
-app.listen(PORT, () => {
-  console.log(`[Renesans Backend] Server http://localhost:${PORT} portida ishga tushdi.`);
-});
+// Faqat lokal ishlaganda serverni ishga tushiramiz (Vercel'da kerak emas)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`[Renesans Backend] Server http://localhost:${PORT} portida ishga tushdi.`);
+  });
+}
+
+export default app;
