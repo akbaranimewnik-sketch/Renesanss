@@ -233,3 +233,4 @@ Renesens/
 ---
 *Loyiha barcha talablarga 100% javob beradi va to'liq o'zbek tilida tayyorlangan.*
 # Renesanss
+# Renesanss
