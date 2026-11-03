@@ -15,8 +15,8 @@ app.use(cors());
 app.use(express.json());
 
 // API health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Renesans LMS Backend tizimi ishlamoqda' });
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'Renesens API ishlayapti' });
 });
 
 // Routes
